@@ -2,8 +2,11 @@
 from __future__ import annotations
 import os
 from typing import Any
+from dotenv import load_dotenv
 
-DEFAULT_MODEL = "llama-3.3-70b-versatile"
+load_dotenv()
+
+DEFAULT_MODEL = "openai/gpt-oss-20b"
 
 class LLMError(RuntimeError):
     """Raised when the model cannot be called or returns no usable text."""
