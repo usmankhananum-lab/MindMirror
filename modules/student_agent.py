@@ -26,7 +26,7 @@ class ConfusedStudentAgent:
         raw = chat_completion(
             build_student_messages(topic, level, explanation, history),
             temperature=0.7,
-            max_tokens=120,
+            max_tokens=600,
             model=self.model,
         )
         question = raw.strip().splitlines()[0].strip()
